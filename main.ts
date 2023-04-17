@@ -1,20 +1,20 @@
 let Avoiding = 0
 let LFSR = 0
 let LFSL = 0
-function Full_Stop() {
+function Full_Stop () {
     maqueen.motorStop(maqueen.Motors.All)
     basic.pause(100)
 }
-function Full_Forwards() {
+function Full_Forwards () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 40)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 40)
     basic.pause(100)
 }
-function Soft_Left() {
+function Soft_Left () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 10)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 40)
 }
-function Distance_Stop() {
+function Distance_Stop () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 40)
     basic.pause(200)
     while (maqueen.Ultrasonic(PingUnit.Centimeters) < 10) {
@@ -22,22 +22,22 @@ function Distance_Stop() {
     }
 }
 // should be 90 degrees
-function Hard_Left() {
+function Hard_Left () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 40)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 40)
     basic.pause(100)
 }
-function Soft_Right() {
+function Soft_Right () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 40)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 10)
 }
 // should be 90 degrees
-function Hard_Right() {
+function Hard_Right () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 40)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 40)
     basic.pause(200)
 }
-function Avoid() {
+function Avoid () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 40)
     basic.pause(200)
     Hard_Right()
